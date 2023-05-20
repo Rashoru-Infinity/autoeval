@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .wrapper {
+                margin: 0 auto;
+                padding: 0 6%;
+                justify-content: space-between;
+            }
+            .main-nav {
+                display: flex;
+                font-size: 1.25rem;
+                margin-top: 34px;
+                list-style: none;
+            }
+            .main-nav li {
+                margin-left: 36px;
+            }
+            .page-header {
+                display: flex;
+                justify-content: space-between;
+                background-color: #eeeeee;
+                border: 1px #55cccc double;
+                height: 10vh;
+            }
+            .pubkeyarea {
+                margin-top: 16px;
+                width: 90vw;
+                height: 15vh;
+            }
+            .update-button {
+                margin-top: 16px;
+                background-color: #2299aa;
+                font-size: 36px;
+                width: 90vw;
+                color: #eeeeee
+            }
+        </style>
+    </head>
+    <body>
+        <header class="page-header wrapper">
+            <h1><a href="/home">{{ . }}</a></h1>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="/subject?subject=operating_system">Operating System</a></li>
+                    <li><a href="/subject?subject=system_programing">System Programing</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <center>
+            <form>
+                <div>
+                    <textarea class="pubkeyarea" placeholder="New public key goes here." id="key" name="key" required></textarea>
+                </div>
+                <div>
+                    <input type="submit" class="update-button" value="Update Key" />
+                </div>
+            </form>
+        </center>
+    </body>
+</html>
